@@ -1,0 +1,514 @@
+/*------ Page CSS------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Property listing styles */
+.results-info {
+    margin-bottom: 20px;
+}
+
+.filter-options {
+    display: flex;
+    gap: 15px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox input {
+    margin-right: 5px;
+}
+
+.checkbox.checked {
+    font-weight: bold;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+/* Property card */
+.property-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.property-badge {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.property-badge span {
+    background-color: #f0f0f0;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #666;
+}
+
+.property-owner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.premium {
+    color: #ff9900;
+    font-weight: bold;
+}
+
+.property-details h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-name {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.property-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature span {
+    color: #666;
+    font-size: 12px;
+}
+
+.feature strong {
+    margin-top: 5px;
+}
+
+.property-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.contact-btn, .secondary-btn {
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+
+/* .contact-btn {
+    background-color: #ff6b6b;
+    color: white;
+} */
+
+.secondary-btn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .top-agents {
+        margin-left: 0;
+    }
+    
+    .primary-nav {
+        gap: 10px;
+    }
+    
+    .property-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .property-actions {
+        flex-direction: column;
+    }
+    
+    .contact-btn, .secondary-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-item {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+    
+    .page-header h1 {
+        font-size: 20px;
+    }
+    
+    .property-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-options {
+        flex-direction: column;
+    }
+}
+
+.property-card {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  gap: 20px;
+  align-items: flex-start;
+  max-width: 1000px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+  width: 35%;
+  position: relative;
+}
+
+.property-image {
+  position: relative;
+}
+
+.property-image > img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.photos-count, .updated-tag {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.photos-count {
+  top: 5px;
+  left: 5px;
+}
+
+.updated-tag {
+  bottom: 5px;
+  left: 5px;
+}
+
+.owner-info {
+  margin-top: 8px;
+}
+
+.badge {
+  display: inline-block;
+  color: #000;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.middle-section {
+  width: 45%;
+}
+
+.middle-section h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.project-name {
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.feature span {
+  font-size: 12px;
+  color: #888;
+}
+
+.feature strong {
+  display: block;
+  font-size: 14px;
+}
+
+.right-section {
+  width: 30%;
+  text-align: right;
+}
+
+.price {
+  color: #0a0;
+  font-size: 20px;
+  margin: 0;
+}
+
+.price-per-sqft {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background-color: #235784;
+  color: white;
+}
+
+.btn.secondary {
+  background-color: white;
+  border: 1px solid #235784;
+  color: #235784;
+}
+
+.btn.link {
+  background: none;
+  color: #007bff;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* Header */
+header {
+    background-color: white;
+    padding: 5px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #235784;
+  }
+  
+  .logo img {
+    height: 60px;
+  }
+  
+  .nav-tabs {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-tabs a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .nav-tabs a:hover,
+  .nav-tabs a.active {
+    color: #235784;
+    background-color: #f0f4ff;
+  }
+
+  /*Filter Tag Bar*/
+.filter-tag-bar {
+    display: flex;
+    height: 70px;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #235784;
+    padding: 12px;
+    border-radius: 12px 12px 12px 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-tag {
+    background-color: white;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    height: 45px;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    position: relative;
+}
+
+.filter-tag.selected {
+    background-color: #f9dcdc;
+    color: #235784;
+}
+
+.filter-tag.inactive {
+    color: #888;
+    background: transparent;
+}
+
+.dropdown {
+    font-size: 12px;
+    color: #235784;
+}
+
+.close {
+    font-size: 16px;
+    color: #235784;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.with-badge {
+    position: relative;
+}
+
+.badge {
+    background-color: #333;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+
+/* Center the property card */
+.property-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: center;
+  margin-top: 30px; /* Space between filter tag bar and property card */
+}
+
+/* Optional: Limit the max width of the card */
+.property-card {
+  max-width: 1450px;
+  width: 100%;
+}
+
+.price-container {
+  display: flex ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Dropdown wrapper */
+.dropdown-wrapper {
+  position: relative;
+}
+
+/* Trigger styling */
+.dropdown-trigger {
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  min-width: 220px;
+}
+
+/* Show dropdown on hover */
+.dropdown-wrapper:hover .dropdown-content {
+  display: block;
+}
+
+/* Option group buttons */
+.option-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.option-btn {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-btn.active,
+.option-btn:hover {
+  background-color: #e0f7f4;
+  border-color: black;
+}
+select.dropdown {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+  color: #000000;
+  cursor: pointer;
+  appearance: none;
+}

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About KeyVista - Building Dreams, One Home at a Time</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            background: linear-gradient(rgba(35, 87, 132, 0.9), rgba(35, 87, 132, 0.9)), 
+                        url('assets/about-hero.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .nav-tabs a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            background-color: transparent;
+          }
+          
+          .nav-tabs a:hover {
+            color: #235784;
+            background-color: transparent;
+          }
+          
+          .nav-tabs a.active {
+            color: #235784;
+            background-color: #f0f4ff;
+            /* OR use the border version: */
+            /* border-bottom: 3px solid #235784;
+            padding-bottom: 2px; */
+          }
+
+        .story-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .story-section h2 {
+            color: #235784;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .story-section h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #f8a61b;
+            margin: 15px auto;
+        }
+
+        .story-card {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 40px;
+        }
+
+        .story-card.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .story-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .story-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .story-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .story-content h3 {
+            color: #235784;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .story-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: #f0f4ff;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 5px solid #f8a61b;
+        }
+
+        .team-section {
+            background-color: #f9f9f9;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+
+        .team-member {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 280px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #f0f4ff;
+        }
+
+        .team-member h4 {
+            color: #235784;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            color: #777;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 80px 20px;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .story-card, .story-card.reverse {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (Same as Homepage) -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="KeyVista Logo" />
+            </div>
+            <nav class="nav-tabs">
+                <a href="index.html">Buy</a>
+                <a href="Page.html">Rent</a>
+                <a href="abouUs.html" class="active">About Us</a>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign up</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Building Dreams, One Home at a Time</h1>
+            <p>At KeyVista, we're revolutionizing real estate by making home ownership accessible, transparent, and joyful for everyone.</p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <h2>Our Journey</h2>
+            
+            <div class="story-card">
+                <div class="story-image">
+                    <img src="assets\AF1.png" alt="KeyVista founders">
+                </div>
+                <div class="story-content">
+                    <h3>The Beginning</h3>
+                    <p>KeyVista was founded in 2019 by <strong>Anwar & Mizan</strong>, two visionaries with over a decade of experience in real estate and technology. What began as a side project to simplify property transactions quickly grew into a mission to transform the entire industry.</p>
+                    <p>Our first platform launched in April 2020, connecting home seekers with verified properties during a time when physical viewings became challenging.</p>
+                </div>
+            </div>
+            
+            <div class="story-card reverse">
+                <div class="story-content">
+                    <h3>Our Vision</h3>
+                    <p>KeyVista was built on a simple principle: real estate should be transparent, accessible, and stress-free. We combine cutting-edge technology with deep market knowledge to create the most user-friendly property platform.</p>
+                    <div class="highlight">
+                        <p>"Our mission is to make finding your dream home as easy as browsing your favorite online store - with all the trust and none of the hassle."</p>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="assets\AF2.png" alt="KeyVista vision">
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <div class="story-image">
+                    <img src="assets\AF3.png" alt="First KeyVista client">
+                </div>
+                <div class="story-content">
+                    <h3>First Success Story</h3>
+                    <p>We received our first property listing request the day our landing page went live. By July 2020, we had helped our <strong>first client</strong> find their perfect home without a single physical visit - proving that technology could make real estate better.</p>
+                    <p>This early validation fueled our passion to innovate further in the property market.</p>
+                </div>
+            </div>
+            
+            <div class="story-card reverse">
+                <div class="story-content">
+                    <h3>The Breakthrough</h3>
+                    <p>When we launched publicly in August 2020, we quickly became one of the fastest-growing real estate platforms, serving over 250 clients in our first week. Our unique approach combining virtual tours, AI recommendations, and honest pricing resonated with home seekers nationwide.</p>
+                    <p>Today, we're proud to have helped thousands of families find their perfect homes while maintaining our startup spirit of innovation.</p>
+                </div>
+                <div class="story-image">
+                    <img src="assets\AF4.png" alt="KeyVista growth">
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <div class="story-image">
+                    <img src="assets\AF5.png" alt="KeyVista meaning">
+                </div>
+                <div class="story-content">
+                    <h3>Why "KeyVista"?</h3>
+                    <p>Our name combines "<strong>Key</strong>" - representing both property keys and solutions - with "<strong>Vista</strong>" - symbolizing the beautiful views and new perspectives we help create. Together, they embody our promise: unlocking your perfect living space with a vision for your future.</p>
+                    <p>Just like the ancient Greek architectural orders that inspired us, we believe in building something that stands the test of time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2>Meet Our Leadership</h2>
+            <p>The passionate team behind KeyVista's success</p>
+            
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="assets\P1.png" alt="Anwar">
+                    <h4>Anwar Rahman</h4>
+                    <p>Co-Founder & CEO</p>
+                    <p>15+ years in real estate technology</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="assets\P7.png" alt="Mizan">
+                    <h4>Sarah Johnson</h4>
+                    <p>Co-Founder & CTO</p>
+                    <p>AI and property matching expert</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="assets\P3.png" alt="Sarah">
+                    <h4>Mizan Chowdhury</h4>
+                    <p>Head of Customer Experience</p>
+                    <p>Making your journey smooth</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <img src="assets/logo.png" alt="KeyVista Logo" class="footer-logo">
+            <p class="footer-tagline">Your trusted partner in finding the perfect home</p>
+            <div class="footer-social">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Properties</a></li>
+                    <li><a href="#">Agents</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-heading">Property Types</h3>
+                <ul>
+                    <li><a href="#">Apartments</a></li>
+                    <li><a href="#">Villas</a></li>
+                    <li><a href="#">Commercial</a></li>
+                    <li><a href="#">Plots</a></li>
+                    <li><a href="#">PG/Hostels</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-heading">Support</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Site Map</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column newsletter">
+                <h3 class="footer-heading">Get Property Alerts</h3>
+                <p>Subscribe to receive updates on new listings in your area.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="contact-info">
+                    <p><i class="icon-phone"></i> +91 9876543210</p>
+                    <p><i class="icon-email"></i> info@keyvista.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-container">
+            <p>&copy; 2025 KeyVista Real Estate. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

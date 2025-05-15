@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Dream Home</title>
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="indexstyle.css">
+    </head>
+<body>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets\logo.png" alt="KeyVista Logo" />
+            </div>
+            <nav class="nav-tabs">
+                <a href="index.html" class="active">Buy</a>
+                <a href="Page.html" id="page">Rent</a>
+                <a href="abouUs.html" id="aboutus">About Us</a>
+                <a href="login.html" id="login">Login</a>
+                <a href="signup.html" id="signup">Sigin/up</a>
+                <div class="account-conatiner">
+                    
+                    <div id="usernameappend" class="username-tab"></div>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Find a Home you'll LOVE!</h1>
+            <div class="search-container">
+                <div class="search-tabs">
+                    <div class="search-tab active">Buy</div>
+                    <div class="search-tab">Rent</div>
+
+                </div>
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Enter City, Locality, Project">
+
+                    <div class="dropdown property-type">
+                        <button class="dropdown-btn" type="button">Flat <span>▼</span></button>
+                        <div class="dropdown-content">
+                            <a href="#" data-type="flat">Flat</a>
+                            <a href="#" data-type="house">House/Villa</a>
+
+                        </div>
+                    </div>
+
+                    <div class="dropdown bhk-dropdown" style="display: none;">
+                        <button class="dropdown-btn" type="button">Select Type <span>▼</span></button>
+                        <div class="dropdown-content" id="bhk-options">
+                            <!-- Options will be dynamically added by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn" type="button">Budget <span>▼</span></button>
+                        <div class="dropdown-content">
+                            <a href="#">$5 Lac</a>
+                            <a href="#">$10 Lac</a>
+                            <a href="#">$20 Lac</a>
+                            <a href="#">$30 Lac</a>
+                            <a href="#">$40 Lac</a>
+                            <a href="#">$50 Lac</a>
+                            <a href="#">$60 Lac</a>
+                        </div>
+                    </div>
+
+                    <button class="search-btn">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>We've got properties for everyone</h2>
+            <div class="feature-cards">
+                <div class="feature-card" style="background-image: url('assets/F1.png');">
+                    <div class="card-content">
+                        <h3>Owner Properties</h3>
+                        <a href="#" class="explore-link">Explore</a>
+                    </div>
+                </div>
+                <div class="feature-card" style="background-image: url('assets/F2.png');">
+                    <div class="card-content">
+                        <h3>Ready to move-in</h3>
+                        <a href="#" class="explore-link">Explore</a>
+                    </div>
+                </div>
+                <div class="feature-card"
+                    style="background-image: url('assets/F3.jpeg');">
+                    <div class="card-content">
+                        <h3>Budget Homes</h3>
+                        <a href="#" class="explore-link">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Property Listings Section -->
+    <section class="property-listings">
+        <div class="container">
+            <h2>Browse by Property Type</h2>
+
+            <!-- Flats -->
+            <h3 class="property-type-heading">Flats</h3>
+            <div class="property-cards">
+                <div class="property-card" style="background-image: url('assets/Flat1.jpg');">
+                    <div class="card-content">
+                        <h4>Modern 2 BHK Flat</h4>
+                    </div>
+                </div>
+                <div class="property-card" style="background-image: url('assets/Flat2.jpg');">
+                    <div class="card-content">
+                        <h4>Luxury Flat in City Center</h4>
+                    </div>
+                </div>
+                <div class="property-card" style="background-image: url('assets/Flat3.jpg');">
+                    <div class="card-content">
+                        <h4>Affordable Family Flat</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apartments -->
+            <h3 class="property-type-heading">Apartments</h3>
+            <div class="property-cards">
+                <div class="property-card" style="background-image: url('assets/Ap1.jpg');">
+                    <div class="card-content">
+                        <h4>Spacious 3 BHK Apartment</h4>
+                    </div>
+                </div>
+                <div class="property-card" style="background-image: url('assets/Ap2.jpg');">
+                    <div class="card-content">
+                        <h4>High-Rise Apartment</h4>
+                    </div>
+                </div>
+                <div class="property-card" style="background-image: url('assets/Ap3.webp');">
+                    <div class="card-content">
+                        <h4>Luxurious Apartment</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bungalows -->
+            <h3 class="property-type-heading">Bungalows</h3>
+            <div class="property-cards">
+                <div class="property-card" style="background-image: url('assets/Bunglow1.jpg');">
+                    <div class="card-content">
+                        <h4>Luxury Bungalow</h4>
+                    </div>
+                </div>
+                <div class="property-card" style="background-image: url('assets/Bunglow2.webp');">
+                    <div class="card-content">
+                        <h4>Modern Hilltop Bungalow</h4>
+                    </div>
+                </div>
+                <div class="property-card" style="background-image: url('assets/Bunglow3.jpg');">
+                    <div class="card-content">
+                        <h4>Budget-Friendly Bungalow</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="faq-section">
+        <h2 class="faq-heading">Frequently Asked Questions</h2>
+
+        <div class="faq-box">
+            <div class="faq-question">
+                <span>Are rental and resale properties both available?</span>
+                <i class="arrow">&#9660;</i>
+            </div>
+            <div class="faq-answer">
+                Yes, we list properties for rent as well as for sale, including new projects and resale homes.
+            </div>
+        </div>
+
+        <div class="faq-box">
+            <div class="faq-question">
+                <span> Can I schedule a visit or tour for a property?</span>
+                <i class="arrow">&#9660;</i>
+            </div>
+            <div class="faq-answer">
+                Yes, you can request a visit by clicking the “Schedule a Tour” button and selecting your preferred date and time.
+            </div>
+        </div>
+
+        <div class="faq-box">
+            <div class="faq-question">
+                <span>Is my personal data safe on your platform?</span>
+                <i class="arrow">&#9660;</i>
+            </div>
+            <div class="faq-answer">
+                Yes, we use advanced encryption and follow strict privacy protocols to protect your data.
+            </div>
+        </div>
+        <div class="faq-box">
+            <div class="faq-question">
+                <span> How do I filter properties by budget or location?</span>
+                <i class="arrow">&#9660;</i>
+            </div>
+            <div class="faq-answer">
+                Use the advanced search filters on our homepage to customize your search by price, area, type, and more.
+            </div>
+        </div>
+        <div class="faq-box">
+            <div class="faq-question">
+                <span>Is Wi-Fi available in all rooms?</span>
+                <i class="arrow">&#9660;</i>
+            </div>
+            <div class="faq-answer">
+                Yes, complimentary high-speed Wi-Fi is available in all rooms and public areas.
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Testimonial Section -->
+<section class="testimonials">
+    <div class="testimonial-container">
+        <h2>What Our Clients Say</h2>
+        <div class="swiper testimonialSwiper">
+            <div class="swiper-wrapper">
+                <!-- Testimonial 1 -->
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">"Absolutely amazing service! Highly recommend."</p>
+                        <div class="client-info">
+                            <img src="assets\P1.png" alt="John Doe" class="client-img">
+                            <div class="client-details">
+                                <h4 class="client-name">John Doe</h4>
+                                <p class="client-position">Marketing Coordinator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">"A great experience from start to finish."</p>
+                        <div class="client-info">
+                            <img src="assets\P2.png" alt="Jane Smith" class="client-img">
+                            <div class="client-details">
+                                <h4 class="client-name">Kane</h4>
+                                <p class="client-position">President of Sales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">"Smooth process and excellent results."</p>
+                        <div class="client-info">
+                            <img src="assets\P3.png" alt="Jane Smith" class="client-img">
+                            <div class="client-details">
+                                <h4 class="client-name">Jane Doe</h4>
+                                <p class="client-position">President of Sales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">"Top-notch service all around."</p>
+                        <div class="client-info">
+                            <img src="assets\P4.png" alt="Jane Smith" class="client-img">
+                            <div class="client-details">
+                                <h4 class="client-name">Sussane</h4>
+                                <p class="client-position">President of Sales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">"Absolutely amazing service! Highly recommend."</p>
+                        <div class="client-info">
+                            <img src="assets\P5.png" alt="Jane Smith" class="client-img">
+                            <div class="client-details">
+                                <h4 class="client-name">Kylie</h4>
+                                <p class="client-position">President of Sales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">"Professional, prompt, and reliable."</p>
+                        <div class="client-info">
+                            <img src="assets\P6.png" alt="Jane Smith" class="client-img">
+                            <div class="client-details">
+                                <h4 class="client-name">Albert</h4>
+                                <p class="client-position">President of Sales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 7 -->
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">"Smooth process and excellent results."</p>
+                        <div class="client-info">
+                            <img src="assets\P7.png" alt="Jane Smith" class="client-img">
+                            <div class="client-details">
+                                <h4 class="client-name">Mary</h4>
+                                <p class="client-position">President of Sales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 8 -->
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">"Professional, prompt, and personable!"</p>
+                        <div class="client-info">
+                            <img src="assets\P8.png" alt="Alex Brown" class="client-img">
+                            <div class="client-details">
+                                <h4 class="client-name">Alex Brown</h4>
+                                <p class="client-position">Web Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <img src="assets/logo.png" alt="KeyVista Logo" class="footer-logo">
+            <p class="footer-tagline">Your trusted partner in finding the perfect home</p>
+            <div class="footer-social">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Properties</a></li>
+                    <li><a href="#">Agents</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-heading">Property Types</h3>
+                <ul>
+                    <li><a href="#">Apartments</a></li>
+                    <li><a href="#">Villas</a></li>
+                    <li><a href="#">Commercial</a></li>
+                    <li><a href="#">Plots</a></li>
+                    <li><a href="#">PG/Hostels</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-heading">Support</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Site Map</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column newsletter">
+                <h3 class="footer-heading">Get Property Alerts</h3>
+                <p>Subscribe to receive updates on new listings in your area.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="contact-info">
+                    <p><i class="icon-phone"></i> +91 9876543210</p>
+                    <p><i class="icon-email"></i> info@keyvista.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-container">
+            <p>&copy; 2025 KeyVista Real Estate. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Load Swiper JS before your script.js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="module" src="firebase-config.js"></script>
+<script type="module" src="script.js"></script>
+</body>
+
+</html>

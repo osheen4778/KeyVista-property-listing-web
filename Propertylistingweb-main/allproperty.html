@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Property Listings</title>
+    <link rel="stylesheet" type="text/css" href="admin.css" />
+</head>
+<body>
+    <div class="container">
+        <section class="container-nav">
+            <nav>
+                <ul>
+                    <li><a href="admin.html">Add Property</a></li>
+                    <li><a href="allproperty.html">All Properties</a></li>
+                    <li>Views</li>
+                    <li>Customers</li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="main-content">
+            <h3>Your Listings</h3>
+
+            <div class="filters">
+                <input type="text" id="search" placeholder="Search properties..." />
+                <select id="sortBy">
+                    <option value="price-asc">Sort by Price (Low to High)</option>
+                    <option value="price-desc">Sort by Price (High to Low)</option>
+                    <option value="title-asc">Sort by Title (A-Z)</option>
+                    <option value="title-desc">Sort by Title (Z-A)</option>
+                </select>
+            </div>
+
+            <ul id="property-list"></ul>
+        </section>
+    </div>
+   <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="admin.js"></script>
+</body>
+</html>

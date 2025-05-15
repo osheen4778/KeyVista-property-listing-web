@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Info Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="contactsyle.css"> 
+</head>
+<body>
+  <div class="form-container">
+    <h2>Contact Info</h2>
+
+    <form onsubmit="event.preventDefault(); alert('Form submitted!');">
+      <!-- Name -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">Name *</label>
+          <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+        </div>
+        <div class="form-group">
+          <label>&nbsp;</label>
+          <input type="text" name="lastName" placeholder="Last Name" required>
+        </div>
+      </div>
+
+      <!-- Phone and Email -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+          <div class="note">example@example.com</div>
+        </div>
+      </div>
+
+      <!-- Dropdown -->
+      <div class="form-group">
+        <label for="source">How did you find us? *</label>
+        <select id="source" name="source" required>
+          <option value="">Select</option>
+          <option value="Google">Google</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Friend">Friend</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <!-- Comments -->
+      <div class="form-group">
+        <label for="comments">Special Requirements / Comments</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <button type="submit" class="submit-button">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

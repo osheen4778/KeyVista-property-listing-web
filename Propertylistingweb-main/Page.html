@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listings</title>
+    <link rel="stylesheet" href="Pagestyle.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets\logo.png" alt="KeyVista Logo" />
+            </div>
+            <nav class="nav-tabs">
+                <a href="Page.html" id="buy" class="active">Buy</a>
+                <a href="Page.html" id="rent">Rent</a>
+                <a href="#">About Us</a>
+                <a href="login.html" id="login">Login</a>
+                <a href="signup.html" id="signup">Sigin/up</a>
+                <div id="usernameappend"></div>
+
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Filter Tag Bar -->
+    <div class="filter-tag-bar">
+        <!-- Dropdown for Buy -->
+        <div class="filter-tag dropdown-wrapper">
+            <div class="dropdown-trigger"> Buy <span class="dropdown">&#9662;</span></div>
+            <div class="dropdown-content">
+                <div class="section">
+                    <p class="section-title">Residential</p>
+                    <div class="option-group">
+                        <button class="option-btn">Buy</button>
+                        <button class="option-btn">Rent</button>
+                        <button class="option-btn">PG</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class ="filter-tag">
+            <select class = "dropdown" id="localities">
+                <option>Top Localities</option>
+                <option value="delhi">Delhi</option>
+                <option value="hyderabad">hyderabad</option>
+                <option value="banglore">Banglore</option>
+                <option value="pune">Pune</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="chennai">Chennai</option>
+                <option value="noida">Noida</option>
+                <option value="gurgaon">Gurgaon</option>
+                <option value="chandigarh">Chandigarh</option>
+             </select>
+        </div>
+
+        <div class ="filter-tag">
+            <select class = "dropdown" id="budget">
+                <option>Budget</option>
+                <option value="1000000">10 Lakh</option>
+                <option value="1500000">15 Lakh</option>
+                <option value="2000000">20 Lakh</option>
+                <option value="3500000">35 Lakh</option>
+                <option value="4500000">45 Lakh</option>
+                <option value="5000000">50 Lakh</option>
+                <option value="10000000">1 cr+</option>
+              
+             </select>
+        </div>
+
+        <div class ="filter-tag">
+            <select class = "dropdown" id="property-type">
+                <option>Property Type</option>
+                <option value="flat">Flat</option>
+                <option value="house">House</option>
+                <option value="villa">Villa</option>   
+             </select>
+        </div>
+
+        <div class ="filter-tag">
+            <select class = "dropdown" id="flat-bhk">
+                <option>BHK</option>
+                <option value="1bhk">1 BHK</option>
+                <option value="2bhk">2 BHK</option>
+                <option value="3bhk">3 BHK</option>
+                <option value="4bhk">4 BHK</option>   
+                 <option value="5bhk">5 BHK</option>   
+
+             </select>
+        </div>
+    </div>
+
+   
+          
+        <div class="property-container">
+            <div id="cards"></div>
+        </div>
+        
+        
+
+    </div>
+    <script type="module" src="firebase-config.js"></script>
+<script type="module" src="Page.js"></script>
+<script type="module" src="script.js"></script>
+</body>
+
+</html>

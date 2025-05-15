@@ -1,0 +1,209 @@
+
+   /* Reset & Base */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+  }
+  
+  /* Container Layout */
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar Navigation */
+  .container-nav {
+    width: 250px;
+    background-color: #1e1e2f;
+    padding-top: 20px;
+    color: white;
+  }
+  
+  .container-nav nav ul {
+    list-style: none;
+  }
+  
+  .container-nav nav ul li {
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .container-nav nav ul li:hover {
+    background-color: #2e2e4d;
+  }
+  
+  .container-nav nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Main Content Area */
+  .main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+  }
+  .main-content h3{
+    color: #235784;
+    font-size: 27px;
+    margin-bottom: 22px;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #235784;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  #price{
+    margin-top: 26px;
+  }
+  #search {
+    margin-right: 20px;
+    width: 300px;
+  }
+  #sortBy{
+    width: 300px;
+  }
+  /* Form Elements */
+  input[type="text"],
+  input[type="number"],
+  input[type="url"],
+  select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+  }
+  
+  fieldset {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 13px;
+  }
+  
+  legend {
+    font-weight: bold;
+    padding: 0 10px;
+  }
+  
+  form button {
+    padding: 12px;
+    background-color: #235784;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 900px;
+    margin-left: 80px ;
+  }
+  
+  form button:hover {
+    background-color: #1c476d;
+  }
+  
+  /* Property List Styling */
+  #property-list {
+    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  #property-list li {
+    background: #f0f0f0;
+    padding: 15px;
+    border-left: 5px solid #235784;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  #property-list li button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  #property-list li .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  #property-list li .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  #property-list li .edit-btn {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  #property-list li .edit-btn:hover {
+    background-color: #d68910;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .container-nav {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .container-nav nav ul li {
+      padding: 10px;
+    }
+  
+    .main-content {
+      padding: 20px;
+    }
+  
+    form button,
+    input,
+    select {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    form {
+      gap: 10px;
+    }
+  
+    input,
+    select {
+      padding: 10px;
+    }
+  
+    form button {
+      padding: 10px;
+    }
+  }
